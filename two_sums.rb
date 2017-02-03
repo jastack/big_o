@@ -32,13 +32,12 @@ end
 
 def two_sum?(arr,target_sum)
   hash = {}
-  arr.each do |num|
-    hash[num] = num
-  end
 
   arr.each do |num|
-    return true if hash[target_sum - num] != nil
+    return true if hash[target_sum - num]
+    hash[num] = true
   end
+
   false
 end
 
